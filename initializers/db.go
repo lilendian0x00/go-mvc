@@ -1,6 +1,7 @@
 package initializers
 
 import (
+	"github.com/lilendian0x00/go-mvc/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
@@ -15,4 +16,11 @@ func ConnectToDatabase(dsn string) {
 		log.Fatalf("error when connecting to DB: %s\n", err.Error())
 	}
 	log.Println("Connected to DB Successfully!")
+}
+
+func SyncDB()  {
+	err := DB.AutoMigrate(&models.Todo{})
+	if err != nil {
+		log.Fatalln(err)
+	}
 }

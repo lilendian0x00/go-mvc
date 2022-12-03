@@ -21,6 +21,8 @@ func init() {
 	}
 
 	initializers.ConnectToDatabase(Configs.DBSource)
+	// migrate models
+	initializers.SyncDB()
 }
 
 func serveStatic(app *fiber.App) {
