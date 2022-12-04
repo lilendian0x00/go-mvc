@@ -12,8 +12,9 @@ type resp struct {
 }
 
 func TodosIndex(c *fiber.Ctx) error {
-	result := initializers.DB.Find(&models.Todo{})
-	return c.Status(200).JSON(result)
+	var Todos []models.Todo
+	_ = initializers.DB.Find(&Todos)
+	return c.Status(200).JSON(Todos)
 }
 
 func AddTodo(c *fiber.Ctx) error {
