@@ -41,6 +41,8 @@ func setupRoutes(app *fiber.App) {
 
 	v1.Get("/list", controllers.TodosIndex)
 
+	v1.Put("/update", controllers.UpdateTodo)
+
 	v1.Post("/add", controllers.AddTodo)
 
 	v1.Delete("/remove", controllers.RemoveTodo)

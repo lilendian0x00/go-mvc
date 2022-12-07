@@ -35,6 +35,24 @@ func AddTodo(c *fiber.Ctx) error {
 	})
 }
 
+func UpdateTodo(c *fiber.Ctx) error {
+	todo :=  new(models.Todo)
+	if err := c.BodyParser(&todo); err != nil {
+		c.Status(400).JSON(resp{
+			Status: "failure",
+			Msg:    "bad post body!",
+		})
+		return err
+	}
+
+	initializers.DB.Model(&todo).Updates(todo)
+
+	return c.Status(200).JSON(resp{
+		Status: "success",
+		Msg:    "todo successfully updated",
+	})
+}
+
 func RemoveTodo(c *fiber.Ctx) error {
 	todo :=  new(models.Todo)
 	if err := c.BodyParser(&todo); err != nil {
