@@ -4,6 +4,8 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"github.com/lilendian0x00/go-mvc/initializers"
 	"github.com/lilendian0x00/go-mvc/models"
+	"gorm.io/gorm"
+	"strconv"
 )
 
 type resp struct {
@@ -54,13 +56,17 @@ func UpdateTodo(c *fiber.Ctx) error {
 }
 
 func RemoveTodo(c *fiber.Ctx) error {
-	todo :=  new(models.Todo)
-	if err := c.BodyParser(&todo); err != nil {
-		c.Status(400).JSON(resp{
+	todoID, err := strconv.ParseUint(c.Params("id"), 10, 16)
+	if err != nil{
+		return c.Status(200).JSON(resp{
 			Status: "failure",
-			Msg:    "bad post body!",
+			Msg:    "id is not valid!",
 		})
-		return err
+	}
+	todo := &models.Todo{
+		Model:       gorm.Model{
+			ID: uint(todoID),
+		},
 	}
 	initializers.DB.Delete(&todo)
 

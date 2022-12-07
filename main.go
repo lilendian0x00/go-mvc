@@ -45,7 +45,7 @@ func setupRoutes(app *fiber.App) {
 
 	v1.Post("/add", controllers.AddTodo)
 
-	v1.Delete("/remove", controllers.RemoveTodo)
+	v1.Delete("/remove/:id", controllers.RemoveTodo)
 }
 
 func main() {
