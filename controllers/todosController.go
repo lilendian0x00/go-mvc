@@ -58,7 +58,7 @@ func UpdateTodo(c *fiber.Ctx) error {
 func RemoveTodo(c *fiber.Ctx) error {
 	todoID, err := strconv.ParseUint(c.Params("id"), 10, 16)
 	if err != nil{
-		return c.Status(200).JSON(resp{
+		return c.Status(400).JSON(resp{
 			Status: "failure",
 			Msg:    "id is not valid!",
 		})
