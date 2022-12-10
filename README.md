@@ -10,6 +10,8 @@ Database: [Postgresql](https://www.postgresql.org/)
 
 Database ORM (Object–relational mapping): [GORM](https://github.com/go-gorm/gorm)
 
+Configuration solution: [Viper](https://github.com/spf13/viper) 
+
 -------------------
 ### Front-End ###
 Main Framework: [ReactJS](https://reactjs.org/)
