@@ -12,6 +12,8 @@ Database ORM (Object–relational mapping): [GORM](https://github.com/go-gorm/go
 ### Front-End ###
 Main Framework: [ReactJS](https://reactjs.org/)
 
+-------------------
+
 ## Run
 ⚠️**Disclaimer:** I've already done `npm run build` for the frontend source code (`frontend`dir) under `views/build`
 
