@@ -1,0 +1,96 @@
+body{
+    background-color: #00006A;
+}
+
+
+.main{
+    border: 1px solid #000000;
+    border-radius: 30px;
+    margin: auto;
+    margin-top: 50px;
+    background-color: #75D41D;
+    /* MIN - MAX WIDTH */
+    max-width: 80%;
+
+    /* Responsive Height */
+    min-height: calc(90vh - 30px);
+
+    position: relative;
+    opacity: 0.9;
+    outline: none;
+    flex-direction: column;
+}
+
+.grid-container{
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.grid-container :first-child{
+    width: 90%;
+    display: inline-block;
+    text-align: center;
+}
+
+.grid-container :last-child{
+    width: 20%;
+}
+
+
+
+
+#title{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    color: #000076;
+    text-align: center;
+    justify-self: center;
+}
+
+.ref{
+    display: inline-block;
+    color: #00FFFF;
+    border: 7px solid #2F2BE2;
+    border-radius: 35px;
+    background-color: #2F2BE2;
+    font-size: 20px;
+    cursor: pointer;
+    outline: #75D41D;
+    margin-top: 15px;
+    font-family: fantasy;
+}
+
+.task{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    padding: 1px 15px;
+    border: 5px #E2552B solid;
+    border-radius: 35px;
+    box-shadow: 8px 5px 1px 0.1px #8A2BE2;
+    font-size: 15px;
+    font-family: Arial, Helvetica;
+    outline: none;
+    display: inline-block;
+}
+
+/* float is default to left for relative position */
+.taskbuttons {
+    position: relative;
+    float: right;
+    align-items: center;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.taskbuttons :first-child {
+    margin-right: 5px;
+}
+
+
+a.edit{
+    
+}

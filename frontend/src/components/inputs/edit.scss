@@ -1,0 +1,65 @@
+
+#edit_modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFFF56;
+    border: 2px red solid;
+    padding: 20px;
+    width: 75%;
+    height: 50%;
+    z-index: 1000;
+    float: right;
+}
+
+#edit_modal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+#mainForm {
+    
+}
+
+.title_form {
+    margin-top: 50px;
+}
+
+.title_form :first-child {
+    display: block;
+    font-size: 20px;
+}
+
+.title_form :last-child {
+    font-size: 20px;
+}
+
+
+.description_form {
+    margin-top: 25px;
+}
+
+
+.description_form :first-child {
+    display: block;
+    font-size: 20px;
+}
+
+.description_form :last-child {
+    font-size: 20px;
+}
+
+#btn-sub {
+    margin-top: 20px;
+}
+
+#btn-sub :first-child {
+    cursor: pointer;
+    font-size: 15px;
+}
